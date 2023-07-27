@@ -36,7 +36,7 @@ export const planForm = createSlice({
     name: 'planForm',
     initialState: initialState,
     reducers: {
-        setStep: (state, action: PayloadAction<1 | 2 | 3 | 4>) => {
+        setStep: (state, action: PayloadAction<Steps>) => {
             state.value.step = action.payload
         },
         setFinished: (state, action: PayloadAction<boolean>) => {
