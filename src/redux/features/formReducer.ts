@@ -4,29 +4,35 @@ type InitialState = {
     value: {
         step: Steps,
         finished: boolean,
+        name: string,
+        email: string,
+        phone: string,
         plan: Plan,
         addons: {
             online: boolean,
             storage: boolean,
-            customProfile: boolean,
+            profile: boolean,
         },
         contract: ContractType,
     }
 }
 export type Steps = 1 | 2 | 3 | 4
-export type Plan = "arcade" | "advanced" | "pro"
+export type Plan = "Arcade" | "Advanced" | "Pro"
 export type ContractType = "monthly" | "yearly"
-export type Addons = "online" | "storage" | "customProfile"
+export type Addons = "online" | "storage" | "profile"
 
 const initialState = {
     value: {
         step: 1,
         finished: false,
-        plan: "arcade",
+        name: "",
+        email: "",
+        phone: "",
+        plan: "Arcade",
         addons: {
             online: false,
             storage: false,
-            customProfile: false,
+            profile: false,
         },
         contract: "monthly",
     }
@@ -42,6 +48,15 @@ export const planForm = createSlice({
         setFinished: (state, action: PayloadAction<boolean>) => {
             state.value.finished = action.payload
         },
+        setName: (state, action: PayloadAction<string>) => {
+            state.value.name = action.payload
+        },
+        setEmail: (state, action: PayloadAction<string>) => {
+            state.value.email = action.payload
+        },
+        setPhone: (state, action: PayloadAction<string>) => {
+            state.value.phone = action.payload
+        },
         setPlan: (state, action: PayloadAction<Plan>) => {
             state.value.plan = action.payload
         },
@@ -53,18 +68,18 @@ export const planForm = createSlice({
                 case "storage":
                     state.value.addons.storage = !state.value.addons.storage
                     break;
-                case "customProfile":
-                    state.value.addons.customProfile = !state.value.addons.customProfile
+                case "profile":
+                    state.value.addons.profile = !state.value.addons.profile
                     break;
                 default:
                     break;
             }
         },
-        setContract: (state, action: PayloadAction<ContractType>) => {
-            state.value.contract = action.payload
+        setContract: (state) => {
+            state.value.contract = state.value.contract === "monthly" ? "yearly" : "monthly"
         },
     }
 })
 
-export const { setStep, setFinished, setPlan, setAddons, setContract } = planForm.actions
+export const { setStep, setFinished, setPlan, setAddons, setContract, setEmail, setName, setPhone } = planForm.actions
 export default planForm.reducer

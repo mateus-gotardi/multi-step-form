@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import formReducer from './features/formReducer'
+import errorsReducer from './features/errorsReducer'
 import { TypedUseSelectorHook, useSelector } from 'react-redux'
 
 export const store = configureStore({
     reducer: {
-        formReducer
+        formReducer,
+        errorsReducer
     }
 })
 
