@@ -41,7 +41,7 @@ export default function StepFour() {
                         <h4>{value.plan} ({value.contract})</h4>
                         <button onClick={() => changeStep(2)}>Change</button>
                     </div>
-                    <span>{plan?.[value.contract]}</span>
+                    <span>{plan?.[value.contract]}{value.contract === 'monthly' ? "/mo" : "/yr"}</span>
                 </div>
                 <hr />
                 <div>
@@ -51,7 +51,7 @@ export default function StepFour() {
                             return (
                                 <div key={i}>
                                     <h4>{addOn.name}</h4>
-                                    <span>{addOn[value.contract]}</span>
+                                    <span>{addOn[value.contract]}{value.contract === 'monthly' ? "/mo" : "/yr"}</span>
                                 </div>
                             )
                         }

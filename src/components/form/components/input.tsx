@@ -41,13 +41,13 @@ export default function InputStp1({ label, id, type }: { label: string, id: "nam
         }
     }
     return (
-        <div className={cn("")}>
-            <div>
-                <label htmlFor={id}>{label}</label>
-                {errors[id] === "empty" && <span className={cn("text-red-500")}>This field is required</span>}
-                {errors[id] === "invalid" && <span className={cn("text-red-500")}>Invalid email address</span>}
+        <div className={cn("flex flex-col gap-1 w-full")}>
+            <div className={cn("flex items-center justify-between")}>
+                <label htmlFor={id} className={cn("font-medium text-marine-blue text-base")}>{label}</label>
+                {errors[id] === "empty" && <span className={cn("text-strawberry-red font-bold")}>This field is required</span>}
+                {errors[id] === "invalid" && <span className={cn("text-strawberry-red")}>Invalid email address</span>}
             </div>
-            <input value={value[id]} type={type} id={id} onChange={(e) => { changeValue(e.target.value) }} />
+            <input className={cn("px-3 text-marine-blue font-bold rounded-lg w-full h-12 border-[1px] focus:outline-purplish-blue", errors[id] ? "border-strawberry-red" : "border-light-gray")} value={value[id]} type={type} id={id} onChange={(e) => { changeValue(e.target.value) }} />
         </div>
     )
 }

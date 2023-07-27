@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Ubuntu } from 'next/font/google'
 import { cn } from '@/utils'
+import Head from 'next/head'
 
 const ubuntu = Ubuntu({ weight: ['300', '400', '500', '700'], subsets: ['latin'] })
 
@@ -18,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(ubuntu.className, "bg-bcg")}>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
+      <body className={cn(ubuntu.className, "bg-magnolia")}>
         <ReduxProvider>
           {children}
         </ReduxProvider>

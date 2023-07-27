@@ -1,0 +1,7 @@
+export const mainContainer = "w-full flex flex-col justify-between items-center px-24 pb-8 pt-12"
+export const nextBtn = "bg-marine-blue text-white px-6 py-3 text-sm rounded-lg transition-all hover:bg-dark-blue"
+export const titleContainer = "flex flex-col w-full items-start justify-around gap-3"
+export const title = "text-marine-blue font-bold text-3xl"
+export const subtitle = "text-cool-gray"
+export const goBackBtn = "py-3 text-cool-gray"
+export const navigationContainer = "w-full flex items-center justify-between"

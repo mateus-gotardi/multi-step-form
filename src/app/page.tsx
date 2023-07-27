@@ -13,9 +13,7 @@ export default function Home() {
     <main className={cn("min-h-screen p-24")}>
       <div className={cn("w-full bg-white flex justify-between p-4 rounded-lg")}>
         <SideMenu />
-        <div className={cn("")}>
-          {value.finished ? <Finish /> : steps[step - 1]}
-        </div>
+        {value.finished ? <Finish /> : steps[step - 1]}
       </div>
     </main>
   )
