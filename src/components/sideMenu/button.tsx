@@ -9,8 +9,8 @@ export default function SideBtn({ num, title }: { num: Steps, title: string }) {
     const dispatch = useDispatch<AppDispatch>();
     const value = UseAppSelector(state => state.formReducer.value)
     const step = value.step
-    const sideButtonStyle = "flex flex-row items-center justify-start gap-5 w-full"
-    const sideBtnInnerDiv = "flex flex-col items-start justify-center"
+    const sideButtonStyle = "flex flex-row items-center justify-center md:justify-start md:gap-5 md:w-full"
+    const sideBtnInnerDiv = "hidden md:flex flex-col items-start justify-center "
     const stepLabelStyle = "text-cool-gray font-light text-sm"
     const stepTitleStyle = "text-white font-medium text-base"
     const nmbStyle = (item: number) => {
