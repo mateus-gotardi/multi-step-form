@@ -20,11 +20,9 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 - [Continued development](#continued-development)
 
-- [Useful resources](#useful-resources)
 
 - [Author](#author)
 
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -77,7 +75,10 @@ Users should be able to:
 ### What I learned
 
 I improved my skills in tailwind and used a function calld cn to improve performance, I also organized the project into components and subcomponents to improve code readability.
-I create functions getPlans and getAddOns in my utils file to easily put API's requests if necessary without causing errors on the code.
+
+I create functions getPlans and getAddOns in my utils.ts file to easily put API's requests if necessary without causing errors on the code.
+
+It took 12 hours for me to acomplish this challenge acording to my wakatime counter
 
 This is the cn function that i spoke:
 
