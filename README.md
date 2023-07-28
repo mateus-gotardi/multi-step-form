@@ -54,6 +54,8 @@ Users should be able to:
 
 ### Screenshot
 
+![image](https://github.com/mateus-gotardi/multi-step-form/assets/98918812/863d5f91-0a02-4d35-a7cc-6a844b5e691c)
+
 ### Links
 
 - Solution URL: [Github Repository](https://github.com/mateus-gotardi/multi-step-form)
