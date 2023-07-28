@@ -10,8 +10,8 @@ export default function Home() {
   const steps = [<StepOne />, <StepTwo />, <StepThree />, <StepFour />]
 
   return (
-    <main className={cn("min-h-screen p-24")}>
-      <div className={cn("w-full bg-white flex justify-between p-4 rounded-lg")}>
+    <main className={cn("min-h-screen lg:px-40 lg:py-20")}>
+      <div className={cn("w-full bg-white flex flex-col md:flex-row justify-between p-4 rounded-lg")}>
         <SideMenu />
         {value.finished ? <Finish /> : steps[step - 1]}
       </div>

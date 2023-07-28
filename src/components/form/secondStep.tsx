@@ -5,14 +5,13 @@ import { useDispatch } from "react-redux";
 import { Plan, Steps, setContract, setPlan, setStep } from "@/redux/features/formReducer";
 import Image from "next/image";
 import { goBackBtn, mainContainer, navigationContainer, nextBtn, subtitle, title, titleContainer } from "../stylesCommon";
+import Navigation from "./components/navigation";
 
 export default function StepTwo() {
     const value = UseAppSelector(state => state.formReducer.value)
     const dispatch = useDispatch<AppDispatch>();
     const plans = getPlans()
-    const changeStep = (stp: Steps) => {
-        dispatch(setStep(stp))
-    }
+
     return (
         <div className={cn(mainContainer)}>
             <div className={cn(titleContainer)}>
@@ -47,10 +46,7 @@ export default function StepTwo() {
                     </label>
                 </div>
             </div>
-            <div className={cn(navigationContainer)}>
-                <button className={cn(goBackBtn)} onClick={() => changeStep(1)}>Go Back</button>
-                <button className={cn(nextBtn)} onClick={() => changeStep(3)}>Next Step</button>
-            </div>
+            <Navigation step={2} />
         </div>
     )
 }
