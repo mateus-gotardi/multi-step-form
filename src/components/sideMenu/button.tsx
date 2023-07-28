@@ -11,11 +11,11 @@ export default function SideBtn({ num, title }: { num: Steps, title: string }) {
     const step = value.step
     const sideButtonStyle = "flex flex-row items-center justify-center md:justify-start md:gap-5 md:w-full"
     const sideBtnInnerDiv = "hidden md:flex flex-col items-start justify-center "
-    const stepLabelStyle = "text-cool-gray font-light text-sm"
+    const stepLabelStyle = "text-light-gray font-light text-sm"
     const stepTitleStyle = "text-white font-medium text-base"
     const nmbStyle = (item: number) => {
         if (step === item) {
-            return "rounded-full w-8 h-8 p-2 bg-pastel-blue font-bold text-black flex items-center justify-center"
+            return "rounded-full w-8 h-8 p-2 bg-light-blue font-bold text-black flex items-center justify-center"
         } else {
             return "rounded-full w-8 h-8 p-2 bg-transparent border-[1px] border-white text-white font-medium flex items-center justify-center"
         }

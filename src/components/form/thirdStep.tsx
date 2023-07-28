@@ -22,7 +22,7 @@ export default function StepThree() {
                 <div className={cn("w-full flex flex-col gap-3 items-center justify-between md:my-0 my-4")}>
                     {addOns.map((addOn, i) => (
                         <label className={cn("w-full flex py-2 md:py-4 px-2 md:px-5 border-[1px] border-light-gray rounded-lg items-center justify-between",
-                            value.addons[addOn.tag as Addons] ? "bg-alabaster border-purplish-blue" : "", "hover:border-purplish-blue")} key={i}>
+                            value.addons[addOn.tag as Addons] ? "bg-alabaster border-purplish-blue" : "", "hover:border-purplish-blue transition-all")} key={i}>
                             <div className="flex gap-3 md:gap-5 items-center justify-start">
                                 <div className="flex items-center justify-center">
                                     <input type='checkbox' id="check" checked={value.addons[addOn.tag as Addons]} onClick={(e) => dispatch(setAddons(addOn.tag as Addons))}

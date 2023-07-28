@@ -23,7 +23,7 @@ export default function StepTwo() {
                     <div className={cn("flex flex-col md:flex-row w-full items-center justify-between gap-4")}>
                         {plans.map((plan, i) => (
                             <button key={i} onClick={(e) => dispatch(setPlan(plan.name as Plan))}
-                                className={cn("min-w-fit w-full p-4 flex md:flex-col md:gap-0 gap-3 items-center md:items-start border-[1px] rounded-lg border-light-gray ",
+                                className={cn("min-w-fit w-full p-4 flex md:flex-col md:gap-0 gap-3 items-center md:items-start border-[1px] rounded-lg border-light-gray hover:border-purplish-blue transition-all",
                                     value.plan === plan.name ? "bg-alabaster border-purplish-blue" : "")}>
                                 <Image src={plan.icon} alt={plan.name} width={50} height={50}
                                     className={cn("md:mb-10")} />

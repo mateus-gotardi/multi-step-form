@@ -44,7 +44,7 @@ export default function StepFour() {
                         <div className={cn(flexLine)}>
                             <div>
                                 <h4 className={cn("text-marine-blue font-bold")}>{value.plan} ({value.contract})</h4>
-                                <button className={cn("text-cool-gray underline underline-offset-2")} onClick={() => changeStep(2)}>Change</button>
+                                <button className={cn("text-cool-gray underline underline-offset-2 hover:text-purplish-blue transition-all")} onClick={() => changeStep(2)}>Change</button>
                             </div>
                             <span className={cn("text-marine-blue font-bold")}>+${plan?.[value.contract]}{value.contract === 'monthly' ? "/mo" : "/yr"}</span>
                         </div>

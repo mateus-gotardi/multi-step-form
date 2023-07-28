@@ -1,34 +1,99 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Multi-step form solution
 
-## Getting Started
+This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- [Overview](#overview)
+
+- [The challenge](#the-challenge)
+
+- [Screenshot](#screenshot)
+
+- [Links](#links)
+
+- [My process](#my-process)
+
+- [Built with](#built-with)
+
+- [What I learned](#what-i-learned)
+
+- [Continued development](#continued-development)
+
+- [Useful resources](#useful-resources)
+
+- [Author](#author)
+
+- [Acknowledgments](#acknowledgments)
+
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Complete each step of the sequence
+
+- Go back to a previous step to update their selections
+
+- See a summary of their selections on the final step and confirm their order
+
+- View the optimal layout for the interface depending on their device's screen size
+
+- See hover and focus states for all interactive elements on the page
+
+- Receive form validation messages if:
+
+- A field has been missed
+
+- The email address is not formatted correctly
+
+- A step is submitted, but no selection has been made
+
+### Screenshot
+
+### Links
+
+- Solution URL: [Github Repository](https://github.com/mateus-gotardi/multi-step-form)
+
+- Live Site URL: [Cervel Deploy](https://multi-step-form-eight-livid.vercel.app)
+
+## My process
+
+### Built with
+
+- Typescript
+
+- [Next.js](https://nextjs.org/) - React framework
+
+- [ReduxJS](https://redux.js.org) - State manage
+
+- [Tailwind CSS](https://tailwindcss.com) - For styles
+
+### What I learned
+
+I improved my skills in tailwind and used a function calld cn to improve performance, I also organized the project into components and subcomponents to improve code readability.
+I create functions getPlans and getAddOns in my utils file to easily put API's requests if necessary without causing errors on the code.
+
+This is the cn function that i spoke:
+
+```ts
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Continued development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project has potential to be used as a template for bigger projects, adding a payment section for example or adapting for other projects necessities
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Author
 
-## Learn More
+- Website - [Mateus Gotardi](https://mateusgotardi.vercel.app)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Frontend Mentor - [@mateus-gotardi](https://www.frontendmentor.io/profile/mateus-gotardi)

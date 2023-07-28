@@ -47,7 +47,7 @@ export default function InputStp1({ label, id, type, placeholder }: { label: str
                 {errors[id] === "empty" && <span className={cn("text-strawberry-red font-bold")}>This field is required</span>}
                 {errors[id] === "invalid" && <span className={cn("text-strawberry-red")}>Invalid email address</span>}
             </div>
-            <input className={cn("px-3 text-marine-blue font-bold rounded-lg w-full h-12 border-[1px] focus:outline-purplish-blue", errors[id] ? "border-strawberry-red" : "border-light-gray")} value={value[id]} type={type} id={id} onChange={(e) => { changeValue(e.target.value) }} placeholder={placeholder} />
+            <input className={cn("px-3 text-marine-blue font-bold rounded-lg w-full h-12 border-[1px] focus:outline-purplish-blue hover:border-purplish-blue", errors[id] ? "border-strawberry-red" : "border-light-gray")} value={value[id]} type={type} id={id} onChange={(e) => { changeValue(e.target.value) }} placeholder={placeholder} />
         </div>
     )
 }
