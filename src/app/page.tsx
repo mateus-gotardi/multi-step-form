@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <main className={cn("min-h-screen lg:px-40 md:py-10 lg:py-20 w-screen")}>
-      <div className={cn("w-full md:bg-white flex flex-col md:flex-row items-center justify-between md:p-4 md:rounded-lg")}>
+      <div className={cn("w-full md:bg-white flex flex-col md:flex-row items-center justify-between md:p-4 md:rounded-lg max-w-screen-lg mx-auto")}>
         <SideMenu />
         {value.finished ? <Finish /> : steps[step - 1]}
       </div>
